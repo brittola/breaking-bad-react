@@ -1,13 +1,233 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('http://fonts.cdnfonts.com/css/breaking-bad');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+html {
+    min-height: 100%;
+}
+
+body {
+    background: rgb(0, 0, 0);
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 80%, rgba(23, 23, 23, 1) 100%);
+    color: rgb(0, 146, 49);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background: rgb(17, 77, 56);
+    background: linear-gradient(0deg, rgba(17, 77, 56, 1) 29%, rgba(0, 107, 36, 1) 66%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px;
+}
+
+nav h1 {
+    font-family: 'BREAKING BAD', sans-serif;
+    font-size: 4rem;
+    color: white;
+    font-weight: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
+}
+
+nav ul li {
+    color: white;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+
+    transition: all 200ms;
+}
+
+nav ul li:hover {
+    border-bottom: 1px solid white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 10px rgb(0, 255, 0, 0.4);
+    max-width: 1920px;
+    margin: 32px auto;
+}
+
+main h1 {
+    font-size: 2.5rem;
+}
+
+main input {
+    font-size: 1.1rem;
+    padding: 6px;
+}
+
+main img,
+.missingImg {
+    max-width: 600px;
+    min-width: 320px;
+    width: 80vw;
+    margin-bottom: 16px;
+}
+
+main p {
+    font-size: 1.2rem;
+}
+
+main p>a {
+    text-decoration: underline;
+    color: white;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.characterCard {
+    border: 2px solid green;
+    margin: 16px;
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+}
+
+.characterImg {
+    width: 300px;
+}
+
+.characterInfos {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px;
+    align-items: center;
+    bottom: 0px;
+    width: 100%;
+    height: 0%;
+    margin-bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    transition: all 400ms;
+}
+
+.characterCard:hover .characterInfos {
+    height: 55%;
+    padding: 16px;
+}
+
+.characterInfos>h3 {
+    font-size: 1.5rem;
+}
+
+.episodeCard {
+    border: 1px solid green;
+    width: 360px;
+    margin: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    gap: 8px;
+
+    transition: background-color 300ms;
+}
+
+.episodeCard:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.episodeCard h3 {
+    font-size: 1.4rem;
+    border-bottom: 1px solid green;
+    padding-bottom: 0px;
+}
+
+.episodeCard h5 {
+    font-size: 1.4rem;
+}
+
+.episodeCard>ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.episodeCard>ul>li {
+    color: white;
+}
+
+.quoteCard {
+    width: 360px;
+    border: 1px solid green;
+    margin: 16px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+
+    transition: background-color 300ms;
+}
+
+.quoteCard>p {
+    text-align: center;
+}
+
+.quoteCard>h3 {
+    font-size: 1.5rem;
+}
+
+.quoteCard:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.link {
+    color: white;
+}
+
+.missingImg {
+    margin-top: -120px;
+}
+
+@media screen and (max-width: 380px) {
+    nav ul li {
+        font-size: 0.9rem;
+    }
+
+    nav h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 310px){
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
 }
