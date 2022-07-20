@@ -1,3 +1,8 @@
+# Breaking Bad React
+
+Projeto que consome uma API com informações do seriado "Breaking Bad".
+Criado para praticar o React Router.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
